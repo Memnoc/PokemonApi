@@ -8,7 +8,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
@@ -16,7 +15,7 @@ import org.json.JSONObject;
 public class PokemonActivity extends AppCompatActivity {
 
     final String URL_BASE = "https://pokeapi.co/api/v2/pokemon";
-    private String POKEMON_NAME = "/charizard";
+    //private String POKEMON_NAME = "/charizard";
 
 
     @Override
@@ -24,7 +23,7 @@ public class PokemonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon);
 
-        final String url = URL_BASE + POKEMON_NAME;
+        final String url = URL_BASE; //+ POKEMON_NAME;
 
         final JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
